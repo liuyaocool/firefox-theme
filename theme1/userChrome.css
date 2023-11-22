@@ -1,0 +1,81 @@
+:root {
+    --top-height: 30px;
+}
+
+/* 将标签栏放在地址栏右侧 */
+#nav-bar {
+    border-right: 1px solid #ccc; /* 可选：添加分隔线 */
+    padding-right: 5px; /* 可选：右侧间距 */
+    /* height: var(--tab-min-height);  设置地址栏与标签栏高度一致 */
+    height: var(--top-height); 
+    width: 50%;
+    margin-left: 50%;
+}
+
+/* ====================== tab bar ============================ */
+ /* 标签栏的样式 */
+#TabsToolbar {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    height: var(--top-height); 
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+    /* display: flex; */
+    background-color: black !important; 
+    z-index: 1; 
+}
+
+#TabsToolbar *{
+    max-height: var(--top-height);
+}
+
+/* 标签栏 单个标签div容器 */
+.tabbrowser-tab {
+    margin-top: 5px;
+	/* border-radius: var(--tab-height) !important; */
+	/* margin-inline-end: var(--gap-between-tabs) !important; */
+	/* min-height: var(--tab-height) !important; */
+    background-color: red !important;
+    border-radius: 10px;
+    color: black !important;
+    font-weight: var(--tab-font-weight) !important;
+    /*background-image: linear-gradient(to left, #a1ffb6, #f9ff99) !important;*/
+}
+
+/* 标签栏 标签按钮 [按钮外层div] (选中) 背景色 */
+.tabbrowser-tab[selected="true"] {
+    background-color: greenyellow !important;
+}
+
+.tab-background {
+    background-color: #a7b3c2 !important;
+    background-size: 100% 3px!important;
+    border: 0 !important;
+    border-image: none !important;
+    padding-top: 5px !important;
+}
+
+.tab-background[selected] {
+    background-color: #1a5fb4 !important;
+}
+
+/* 标签按钮 会覆盖选中 */
+.tab-content {
+    color: blueviolet;
+    background-color: green;
+    /*background-image: none;*/
+    height: 20px !important;
+    /*margin-top: 10% !important;*/
+    width: 100%;
+    margin-top: 10px !important;
+    border-radius: 10px;
+    font-family: var(--tab-font) !important;
+}
+
+.tab-content[selected] {
+    background-color: yellow !important;
+}
