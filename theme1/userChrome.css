@@ -1,81 +1,130 @@
+
+:root {
+    --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
+    --top-whole-bg: hsl(240, 2%, 20%);
+    --tab-item-bg: hsl(240, 2%, 26%);
+    --tab-item-hover-bg: hsl(240, 2%, 32%);
+    --tab-item-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4);
+    --tab-item-selected-bg: var(--firefoxcss-main-bg-color);
+}
+
 :root {
     --top-height: 30px;
+    --tab-min-width: 110px;
+    --tab-max-width: 150px;
+    --tab-height: 20px;
+    --tab-margin: 5px 0 0 0;
+    --tab-font-family: "source code pro";
+}
+
+/** 
+  * 顶部栏顺序
+  * 0 - top
+  * 1 - second from top
+  * 2 - bottom 
+  */
+/* SEARCH BAR TOOLBAR */
+#navigator-toolbox #nav-bar { order: 1 !important; }
+/* TABS TOOLBAR */  
+#titlebar { order: 0 !important; }
+/* BOOKMARKS TOOLBAR*/
+#PersonalToolbar { order: 2 !important; }
+/* Extra titlebar menu (above or below tabs, opens with alt) */
+#titlebar #toolbar-menubar { order: 0 !important;}
+
+
+/* 整个顶部栏div, 包含tab url bookmark */
+#navigator-toolbox {
+    background-color: var(--top-whole-bg) !important;
+    /* backdrop-filter: blur(2px); */
 }
 
 /* 将标签栏放在地址栏右侧 */
-#nav-bar {
+#navigator-toolbox #nav-bar {
     border-right: 1px solid #ccc; /* 可选：添加分隔线 */
     padding-right: 5px; /* 可选：右侧间距 */
-    /* height: var(--tab-min-height);  设置地址栏与标签栏高度一致 */
     height: var(--top-height); 
     width: 50%;
     margin-left: 50%;
 }
-
-/* ====================== tab bar ============================ */
- /* 标签栏的样式 */
-#TabsToolbar {
-    visibility: visible;
+#titlebar {
     position: absolute;
-    top: 0;
     left: 0;
-    right: 50%;
-    height: var(--top-height); 
-    overflow-x: hidden;
-    overflow-y: auto;
-    white-space: nowrap;
-    /* display: flex; */
-    background-color: black !important; 
-    z-index: 1; 
+    right: 0;
+    width: 50%;
 }
 
-#TabsToolbar *{
-    max-height: var(--top-height);
+/* ====================== tab 栏 ============================ */
+/* 标签栏的样式 */
+#TabsToolbar {
+    /* visibility: visible; */
+    /* white-space: nowrap; */
+    /* display: flex; */
+    /* background-image: linear-gradient(to left, #a1ffb6, #f9ff99) !important; */
 }
+
+/* ------------------------------------ tab width ------------------------------------ */
+/* Width of the tabs. Important to have Fadein or it breaks fonctionality */
+/* not([style^="max-width"] :not([overflow])*/
+#tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: var(--tab-max-width) !important;
+    min-width: var(--tab-min-width) !important;
+}
+/* Selected tabs width increase */
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[selected][fadein]:not([pinned]) {
+    max-width: 175px !important;
+}
+/* Selected tabs width when overflowing */
+#tabbrowser-tabs[overflow] .tabbrowser-tab[selected][fadein]:not([pinned]) {
+    min-width: 150px !important;
+}
+/* ------------------------------------ ------------------------------------ */
 
 /* 标签栏 单个标签div容器 */
 .tabbrowser-tab {
-    margin-top: 5px;
-	/* border-radius: var(--tab-height) !important; */
-	/* margin-inline-end: var(--gap-between-tabs) !important; */
-	/* min-height: var(--tab-height) !important; */
-    background-color: red !important;
-    border-radius: 10px;
-    color: black !important;
-    font-weight: var(--tab-font-weight) !important;
-    /*background-image: linear-gradient(to left, #a1ffb6, #f9ff99) !important;*/
+    /* margin-inline-end: var(--gap-between-tabs) !important; */
+    height: var(--top-height) !important;
 }
+
 
 /* 标签栏 标签按钮 [按钮外层div] (选中) 背景色 */
-.tabbrowser-tab[selected="true"] {
-    background-color: greenyellow !important;
+.tabbrowser-tab[selected] {
 }
 
+/* can not set height */
 .tab-background {
-    background-color: #a7b3c2 !important;
-    background-size: 100% 3px!important;
-    border: 0 !important;
-    border-image: none !important;
-    padding-top: 5px !important;
 }
 
-.tab-background[selected] {
-    background-color: #1a5fb4 !important;
+.tab-background[selected], .tab-background {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
 }
 
-/* 标签按钮 会覆盖选中 */
+/* 标签按钮 内容 */
 .tab-content {
-    color: blueviolet;
-    background-color: green;
-    /*background-image: none;*/
-    height: 20px !important;
-    /*margin-top: 10% !important;*/
-    width: 100%;
-    margin-top: 10px !important;
-    border-radius: 10px;
-    font-family: var(--tab-font) !important;
+    height: var(--tab-height);
+    margin: var(--tab-margin);
+    border: 0px solid white !important;
+    border-radius: 5px !important;
+    background-image: none !important;
+    background-color: var(--tab-item-bg) !important;
+    transition: background-color 250ms ease !important;
+    box-shadow: var(--tab-item-shadow) !important;
+    font-family: var(--tab-font-family);
+}
+
+.tab-content:hover{
+    background-color: var(--tab-item-hover-bg) !important;
 }
 
 .tab-content[selected] {
-    background-color: yellow !important;
+    background-color: var(--tab-item-selected-bg) !important;
+    box-shadow: none !important;
+    outline: none !important;  
 }
+
+/* ========================== url栏 =================================== */
+
+
