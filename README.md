@@ -36,10 +36,35 @@ run `firefox -P` to re init
             <div id="urlbar">
                 <div id="urlbar-background">
                 <div id="urlbar-input-container">
-                    <div class="urlbar-input-box"></div>
+                    <div class="urlbar-input-box">
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>    
 </div>
+```
+
+
+?? 
+``` css
+#urlbar[breakout][breakout-extend] > #urlbar-input-container,
+.urlbar-page-action
+#urlbar[breakout][breakout-extend][open]
+#wrapper-urlbar-container
+#urlbar-go-button
+#urlbar .urlbarView-body-inner
+#urlbar:not(.megabar):not([focused="true"]),
+#urlbar:not(.megabar):not([focused="true"]):hover {
+  border-bottom: transparent;
+}
+.urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
+  border-top: none !important;
+}
+/* Megabar */
+#urlbar[breakout] {
+  height: auto !important;
+}
+
 ```
