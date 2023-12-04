@@ -18,10 +18,12 @@
 }
 
 #navigator-toolbox {
+    /* font-family: "SimHei", sans-serif; */
     font-family: 'source code pro';
 }
 #navigator-toolbox .chinese {
-    /* font-family: "Microsoft YaHei", sans-serif; */
+    /* Microsoft YaHei */
+    /* font-family: "SimHei", sans-serif; */
     /* font-family: 'Noto Sans SC', sans-serif; */
 }
 

@@ -1,11 +1,25 @@
-# firefox-thtme
+# firefox-theme
+
+## 000 my theme
+
+semi-finished
+
+## 001-Firefox-Mod-Blur-Modify
+
+git from: `https://github.com/datguypiko/Firefox-Mod-Blur.git` 
+
+<img src="img/001.png">
+
+
 
 # install
 
-1. browser `about:support`
+1. browser `about:config`
 2. set `toolkit.legacyUserProfileCustomizations.stylesheets=true`
-
-
+3. browser `about:support`, open **Profile Directory**
+4. `cp ./* ${Profile Directory}/chrome/` and `cd ${Profile Directory}/chrome/`
+5. run `./select 001`
+6. restart firefox
 
 
 # about firefox

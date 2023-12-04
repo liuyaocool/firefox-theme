@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <prefix>"
+    exit 1
+fi
+
+# 使用for循环匹配文件名前缀
+for file in "${1}"*; do
+    # 获取第一个匹配到的文件名
+    echo "@import \"${file}/userChrome.css\"" > userChrome.css
+    echo "@import \"${file}/userContent.css\"" > userContent.css
+    break
+done
+
