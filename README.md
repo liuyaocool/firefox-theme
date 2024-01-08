@@ -35,9 +35,17 @@ run `firefox -P` to re init
 ## tab bar
 
 ```html
-<div id="">
-
-
+<div id="titlebar">
+    <div id="TabsToolbar">
+        <div id="tabbrowser-tabs">
+            <div class="tabbrowser-tab">
+                <div class="tab-background"></div>
+            </div>
+            <div class="tabbrowser-tab">
+                <div class="tab-background"></div>
+            </div>
+        </div>
+    </div>
 </div>
 ```
 
