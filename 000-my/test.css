@@ -1,0 +1,97 @@
+#main-window > body > #browser{
+    flex-direction: column-reverse !important;
+    backdrop-filter: blur(6px) !important;
+    background-color: rgba(0,0,0,0.7) !important;
+}
+
+#TabsToolbar {
+    /* background-color: red !important; */
+    /* margin-top: 5px !important; */
+    /* overflow: auto; */
+}
+
+#TabsToolbar > #tabbrowser-tabs 
+/* > #tabbrowser-arrowscrollbox */
+ /* > .tabbrowser-tab > .tab-background  */
+{
+    /* background-color: blue !important; */
+}
+#tabbrowser-tabs > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack {
+    /* color: black !important; */
+    /* background-color: blueviolet !important; */
+}
+
+.tabbrowser-tab > .tab-stack{
+    /* margin: 3px !important; */
+}
+.tabbrowser-tab {
+    /* background-color: yellow !important; */
+
+}
+#TabsToolbar {
+    /* position: relative !important; */
+}
+#TabsToolbar #tabbrowser-tabs{
+    /* position: absolute !important; */
+    /* top: 0 !important; */
+    /* left: 0 !important; */
+    /* right: 0 !important; */
+    /* bottom: 0 !important; */
+    /* background-color: green !important; */
+}
+
+
+.tabbrowser-tab > .tab-stack{
+    /* background-color: green !important; */
+}
+.tabbrowser-tab > .tab-stack > .tab-background {
+    /* background-color: red !important; */
+    /* position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important; */
+    max-height: 100% !important;
+    min-height: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    /* width: 100% !important; */
+    /* height: 100% !important; */
+}
+
+
+:root {
+    --top-bg-color: gray;
+}
+
+.tab-stack {
+    /* background-color: blueviolet !important; */
+    /* color: aqua !important; */
+}
+
+.tabbrowser-tab .tab-label-container .tab-label {
+    transition: color 250ms ease !important;
+}
+
+
+:root {
+    --firefoxcss-tab-multiselect-outline: rgba(255, 255, 255, 0.1);
+    --firefoxcss-tab-bg-color: hsl(240, 2%, 26%);
+    --firefoxcss-tab-active-bg-color: var(--firefoxcss-main-bg-color);
+    --firefoxcss-border-radius: 10px;
+    --firefoxcss-normal-tabs-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4);
+    --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 32%);
+}
+
+/* Multiselect tabs */
+#tabbrowser-tabs .tabbrowser-tab[multiselected] .tab-stack {
+  /* background-color: var(--firefoxcss-tab-active-bg-color) !important; */
+  /* box-shadow: none !important; */
+}
+
+#tabbrowser-tabs
+  .tabbrowser-tab:is([selected]):is([multiselected]) .tab-stack {
+  /* outline: 1px solid var(--firefoxcss-tab-multiselect-outline) !important; */
+  /* outline-offset: 0px !important; */
+  /* outline-width: 1px !important; */
+}

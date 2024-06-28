@@ -32,39 +32,49 @@ run `firefox -P` to re init
 
 # guess window source code
 
-## tab bar
-
 ```html
-<div id="titlebar">
-    <div id="TabsToolbar">
-        <div id="tabbrowser-tabs">
-            <div class="tabbrowser-tab">
-                <div class="tab-background"></div>
-            </div>
-            <div class="tabbrowser-tab">
-                <div class="tab-background"></div>
-            </div>
-        </div>
-    </div>
-</div>
-```
-
-## url bar
-
-```html
-<div id="nav-bar">
-    <div id="nav-bar-customization-target">
-        <div id="urlbar-container">
-            <div id="urlbar">
-                <div id="urlbar-background">
-                <div id="urlbar-input-container">
-                    <div class="urlbar-input-box">
-                        
+<div id="navigator-toolbox">
+    <!-- tab bar -->
+    <div id="titlebar">
+        <div id="TabsToolbar">
+            <div id="...">
+                <div id="tabbrowser-tabs">
+                    <div id="tabbrowser-arrowscrollbox">
+                        <div class="tabbrowser-tab">
+                            <div class="tab-stack">
+                                icon 新标签页1
+                                <div class="tab-background"></div>
+                            </div>
+                        </div>
+                        <div class="tabbrowser-tab">
+                            <div class="tab-stack">
+                                icon 新标签页2
+                                <div class="tab-background"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    <!-- url bar -->
+    <div id="nav-bar">
+        <div id="nav-bar-customization-target">
+            <div id="urlbar-container">
+                <div id="urlbar">
+                    <div id="urlbar-background"></div>
+                    <div id="urlbar-input-container">
+                        <div class="urlbar-input-box">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="PanelUI-button">
+            <div id="PanelUI-menu-button">菜单(三横线)</div>
+        </div>
+    </div>
 </div>
 ```
 

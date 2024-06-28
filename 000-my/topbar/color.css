@@ -1,0 +1,29 @@
+#nav-bar,
+#titlebar
+{
+    background: none !important;
+}
+
+#navigator-toolbox{
+    background-color: hsl(240, 2%, 20%) !important;
+}
+
+/* ==================== tab bar ==================== */
+.tabbrowser-tab > .tab-stack {
+    transition: background-color 250ms ease !important;
+}
+.tabbrowser-tab:not([selected]) > .tab-stack {
+    background-color:  hsl(240, 2%, 26%) !important;
+    box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4) !important;
+}
+.tabbrowser-tab:not([selected]):hover > .tab-stack {
+  background-color: hsl(240, 2%, 32%) !important;
+}
+
+.tabbrowser-tab[selected] > .tab-stack {
+    background-color:  hsl(240, 2%, 16%) !important;
+    box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+/* ==================== url bar ==================== */

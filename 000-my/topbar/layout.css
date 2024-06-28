@@ -1,0 +1,57 @@
+:root {
+    --url-bar-ratio: 36%;
+}
+
+/* Menu button */
+#PanelUI-button {
+    -moz-box-ordinal-group: 0 !important;
+    order: -2 !important;
+}
+#PanelUI-menu-button {
+    padding: 0 !important;
+}
+
+.tab-background,
+/* #back-button, */
+/* #forward-button, */
+/* #reload-button, */
+/* #stop-reload-button, */
+/* toolbarspring, */
+/* All tabs (v-like) button, "v" button */
+#alltabs-button
+{
+    display: none !important;
+}
+
+/* Only the tabs space will grow from here */
+@media screen and (min-width: 888px) {
+    #titlebar {
+        position: absolute !important;
+        right: 0px !important;
+        width: calc(100% - var(--url-bar-ratio)) !important;
+    }
+    #nav-bar {
+        width: calc(var(--url-bar-ratio) - 20px) !important;
+    }
+}
+
+/* Both the tabs space and the navbar will grow */
+@media screen and (min-width: 950px) and (max-width: 1324px) {
+    /* 
+    #TabsToolbar,
+    #nav-bar {
+        transition: margin-top 0.25s !important;
+    } */
+}
+
+/* The window is not enough wide for a one line layout */
+@media screen and (max-width: 888px) {
+    /* :root #nav-bar {
+        padding: 0 5px 0 5px !important;
+        height: calc(var(--NavbarHeightSmall) * 1px) !important;
+    }
+    #TabsToolbar,
+    #nav-bar {
+        transition: margin-top 0.25s !important;
+    } */
+}

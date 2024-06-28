@@ -1,0 +1,36 @@
+:root {
+    --top-height: 30px;
+    --top-font-size: 12px;
+    --tab-min-width: 110px;
+    --tab-max-width: 150px;
+}
+
+#nav-bar {
+    height: var(--top-height) !important;
+}
+#titlebar {
+    height: var(--top-height) !important;
+}
+#nav-bar {
+    vertical-align: center !important;
+}
+
+/* ==================== tab bar ==================== */
+#tabbrowser-tabs {
+    height: var(--top-height) !important;
+}
+.tabbrowser-tab {
+    height: 100% !important;
+    padding: 3px !important;
+}
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: var(--tab-max-width) !important;
+    /* min-width: var(--tab-min-width) !important; */
+}
+.tab-stack {
+    border-radius: calc((var(--top-height) - 6px) / 2) !important;
+    font-size: var(--top-font-size) !important;
+}
+
+/* ==================== url bar ==================== */
+
