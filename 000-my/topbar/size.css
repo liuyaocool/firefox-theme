@@ -2,7 +2,7 @@
     --top-height: 30px;
     --top-font-size: 12px;
     --url-input-height: calc(var(--top-height) * 0.8);
-    --tab-height: calc(var(--url-input-height) + 6px);
+    --tab-height: calc(var(--url-input-height) + 7px);
 
     --tab-margin-top: calc((var(--top-height) - var(--tab-height)) / 2);
     --tab-border-radius: calc(var(--tab-height) * 0.5) !important;
