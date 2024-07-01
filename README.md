@@ -2,7 +2,9 @@
 
 ## 000 my theme
 
-semi-finished
+semi-finished: only top bar
+
+<img src="img/000.png">
 
 ## 001-Firefox-Mod-Blur-Modify
 
