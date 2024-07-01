@@ -3,6 +3,7 @@
     --top-font-size: 12px;
     --tab-min-width: 110px;
     --tab-max-width: 150px;
+    --url-input-height: 23px;
 }
 
 #nav-bar {
@@ -33,4 +34,27 @@
 }
 
 /* ==================== url bar ==================== */
+#urlbar .urlbar-input-box {
+    font-size: 14px !important;
+}
 
+#urlbar-container {
+    width: calc(100% - 200px) !important;
+    height: var(--url-input-height) !important;
+    margin-top: calc((var(--top-height) - var(--url-input-height)) / 2) !important;
+}
+
+/* Search Bar height ??? */
+#urlbar-container #urlbar {
+    /* --urlbar-min-height: var(--url-input-height) !important; */
+    /* --urlbar-height: var(--url-input-height) !important; */
+    min-height: var(--url-input-height) !important;
+    /* height: var(--url-input-height) !important; */
+}
+
+#urlbar-input-container,
+#searchbar,
+#urlbar-container,
+#urlbar {
+  border-radius: 10px !important;
+}
