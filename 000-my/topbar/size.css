@@ -49,7 +49,9 @@
 }
 
 #urlbar-container {
-    width: calc(100% - 200px) !important;
+    min-width: 0px !important;
+    flex: auto !important;
+    /* width: calc(100% - 200px) !important; */
     height: var(--url-input-height) !important;
     margin-top: calc((var(--top-height) - var(--url-input-height)) / 2) !important;
 }
