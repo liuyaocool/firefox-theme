@@ -4,7 +4,13 @@
 
 semi-finished: only top bar
 
+**linux**
+
 <img src="img/000.png">
+
+**macos**
+
+<img src="img/000_mac.png">
 
 ## 001-Firefox-Mod-Blur-Modify
 
