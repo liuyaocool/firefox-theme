@@ -1,0 +1,15 @@
+@media (-moz-platform: linux) {
+}
+@media (-moz-platform: macos), (-moz-platform: windows) {
+}
+
+#navigator-toolbox > #TabsToolbar {
+    /* background-color: red !important; */
+}
+
+#tabbrowser-tabs {
+    /* background-color: green !important; */
+}
+
+#nav-bar {
+}
