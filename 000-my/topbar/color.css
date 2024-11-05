@@ -1,11 +1,20 @@
+:root {
+    --top-bar-bg-color: hsl(240, 2%, 20%);
+}
+
 #nav-bar,
 #titlebar
 {
     background: none !important;
 }
 
-#navigator-toolbox{
-    background-color: hsl(240, 2%, 20%) !important;
+@media (-moz-platform: windows) {
+    #tabbrowser-tabs {
+        background-color: var(--top-bar-bg-color) !important;
+    }
+}
+#navigator-toolbox {
+    background-color: var(--top-bar-bg-color) !important;
 }
 
 /* ==================== tab bar ==================== */

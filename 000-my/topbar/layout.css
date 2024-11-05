@@ -1,5 +1,13 @@
-:root {
-    --url-bar-ratio: 36%;
+@media screen and (min-width: 1300px) {
+    :root {
+        --url-bar-ratio: 36%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    :root {
+        --url-bar-ratio: 50%;
+    }
 }
 
 /* Menu button */
@@ -37,6 +45,24 @@
         }
         #nav-bar {
             width: calc(var(--url-bar-ratio) - 20px) !important;
+        }
+    }
+    @media (-moz-platform: windows) {
+        #titlebar {
+            position: absolute !important;
+            right: 0px !important;
+            width: calc(100% - var(--url-bar-ratio)) !important;
+        }
+        #nav-bar {
+            width: calc(var(--url-bar-ratio) + 5px) !important;
+        }
+        #tabbrowser-tabs {
+            position: absolute !important;
+            left: 0px !important;
+            right: 0px !important;
+            top: 0px !important;
+            bottom: 0px !important;
+            z-index: 2;
         }
     }
     @media (-moz-platform: macos) {
