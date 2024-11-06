@@ -35,6 +35,7 @@
 }
 
 /* ==================== url bar ==================== */
+/* urlbar-container不包含下拉 */
 .tabbrowser-tab[selected] > .tab-stack,
 #urlbar {
     background-color: hsl(240, 2%, 13%) !important;

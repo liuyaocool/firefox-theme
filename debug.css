@@ -7,9 +7,36 @@
     /* background-color: red !important; */
 }
 
+#TabsToolbar {
+
+}
+
 #tabbrowser-tabs {
     /* background-color: green !important; */
 }
 
+#titlebar {
+    /* background-color: yellow !important; */
+}
+
 #nav-bar {
+}
+
+#nav-bar > #nav-bar-customization-target {
+    /* background-color: red !important; */
+}
+#nav-bar-customization-target > #urlbar-container {
+    /* background-color: orange !important; */
+}
+#urlbar-container > #urlbar {
+    /* background-color: yellow !important; */
+}
+#urlbar > #urlbar-background {
+    /* background-color: green !important; */
+}
+#urlbar > #urlbar-input-container {
+    /* background-color: blue !important; */
+}
+#urlbar-input-container > #urlbar-input-box {
+    /* background-color: purple !important; */
 }

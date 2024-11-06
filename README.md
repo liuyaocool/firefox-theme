@@ -40,7 +40,7 @@ run `firefox -P` to re init
 
 # guess window source code
 
-## linux
+## windows
 
 ```html
 <div id="navigator-toolbox">
@@ -88,7 +88,7 @@ run `firefox -P` to re init
 </div>
 ```
 
-## macos
+## macos/linux
 
 ```html
 <div id="navigator-toolbox">

@@ -1,15 +1,3 @@
-@media screen and (min-width: 1300px) {
-    :root {
-        --url-bar-ratio: 36%;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    :root {
-        --url-bar-ratio: 50%;
-    }
-}
-
 /* Menu button */
 #PanelUI-button {
     -moz-box-ordinal-group: 0 !important;
@@ -35,16 +23,59 @@
     display: none !important;
 }
 
+:root {
+    --top-height: 30px;
+    --top-font-size: 12px;
+    --url-input-height: calc(var(--top-height) * 0.8);
+    --tab-height: calc(var(--url-input-height) + 7px);
+
+    --tab-margin-top: calc((var(--top-height) - var(--tab-height)) / 2);
+    --tab-border-radius: calc(var(--tab-height) * 0.5) !important;
+    --tab-min-width: 110px;
+    --tab-max-width: 150px;
+    --url-border-radius: calc(var(--url-input-height) * 0.5);;
+}
+
 /* Only the tabs space will grow from here */
 @media screen and (min-width: 888px) {
-    @media (-moz-platform: linux) {
-        #titlebar {
+    @media screen and (min-width: 1300px) {
+        :root {
+            --url-bar-ratio: 36%;
+        }
+    }
+    @media screen and (max-width: 1300px) {
+        :root {
+            --url-bar-ratio: 50%;
+        }
+    }
+    @media (-moz-platform: linux), (-moz-platform: macos) {
+        #TabsToolbar {
             position: absolute !important;
             right: 0px !important;
             width: calc(100% - var(--url-bar-ratio)) !important;
         }
+        #tabbrowser-tabs {
+            position: absolute !important;
+            top: 0px !important;
+            bottom: 0px !important;
+        }
+    }
+    @media (-moz-platform: linux) {
         #nav-bar {
-            width: calc(var(--url-bar-ratio) - 20px) !important;
+            width: calc(var(--url-bar-ratio)) !important;
+        }
+        #tabbrowser-tabs {
+            left: 0px !important;
+            right: 30px !important;
+        }
+    }
+    @media (-moz-platform: macos) {
+        #nav-bar {
+            width: calc(var(--url-bar-ratio) + 15px) !important;
+        }
+        #tabbrowser-tabs {
+            left: 70px !important;
+            right: 0px !important;
         }
     }
     @media (-moz-platform: windows) {
@@ -63,23 +94,6 @@
             top: 0px !important;
             bottom: 0px !important;
             z-index: 2;
-        }
-    }
-    @media (-moz-platform: macos) {
-        #TabsToolbar {
-            position: absolute !important;
-            right: 0px !important;
-            width: calc(100% - var(--url-bar-ratio)) !important;
-        }
-        #nav-bar {
-            width: calc(var(--url-bar-ratio) + 15px) !important;
-        }
-        #tabbrowser-tabs {
-            position: absolute !important;
-            left: 70px !important;
-            right: 0px !important;
-            top: 0px !important;
-            bottom: 0px !important;
         }
     }
 }
@@ -148,6 +162,11 @@
   transition: opacity 50ms ease;
 }
 
+/* 首次打开 输入款向下偏移 */
+#urlbar {
+    margin: 0 !important;
+}
+
 #urlbar #identity-icon-box,
 #urlbar #identity-permission-box {
   opacity: 0 !important;
@@ -168,4 +187,69 @@
 #identity-box #identity-icon-box[open="true"]{
   opacity: 1 !important;
   margin-inline-start: initial !important;
+}
+
+/* ==================== top bar size ==================== */
+#nav-bar {
+    height: var(--top-height) !important;
+}
+#titlebar {
+    height: var(--top-height) !important;
+}
+#nav-bar {
+    /* vertical-align: center !important; */
+}
+
+/* ==================== tab bar size ==================== */
+#tabbrowser-tabs {
+    height: var(--top-height) !important;
+}
+#tabbrowser-arrowscrollbox {
+    height: 100% !important;
+    padding: 0 !important;
+}
+.tabbrowser-tab {
+    height: var(--tab-height) !important;
+    margin-top: var(--tab-margin-top) !important;    
+    padding: 3px !important;
+}
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: var(--tab-max-width) !important;
+    /* min-width: var(--tab-min-width) !important; */
+}
+.tab-stack {
+    border-radius: var(--tab-border-radius) !important;
+    font-size: var(--top-font-size) !important;
+}
+
+/* ==================== url bar size ==================== */
+#urlbar .urlbar-input-box {
+    font-size: 14px !important;
+}
+
+#urlbar-container {
+    min-width: 0px !important;
+    flex: auto !important;
+    /* width: calc(100% - 200px) !important; */
+    height: var(--url-input-height) !important;
+    margin-top: calc((var(--top-height) - var(--url-input-height)) / 2) !important;
+}
+
+/* Search Bar height ??? */
+#urlbar {
+    /* --urlbar-min-height: var(--url-input-height) !important; */
+    /* --urlbar-height: var(--url-input-height) !important; */
+    min-height: var(--url-input-height) !important;
+    height: var(--url-input-height) !important;
+}
+
+#urlbar[open] {
+    height: auto !important;
+}
+
+#urlbar-input-container,
+#searchbar,
+#urlbar-container,
+#urlbar {
+  border-radius: var(--url-border-radius) !important;
 }
