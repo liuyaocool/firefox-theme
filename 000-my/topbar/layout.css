@@ -9,9 +9,9 @@
 
 /* #page-action-buttons, */
 .tab-background,
-/* url条左侧盾牌按钮 */
-#tracking-protection-icon-container,
+#tracking-protection-icon-container, /* url条左侧盾牌按钮 */
 #urlbar-background,
+.titlebar-min, /* 最小化按钮 */
 /* #back-button, */
 /* #forward-button, */
 /* #reload-button, */
@@ -26,6 +26,7 @@
 :root {
     --top-height: 30px;
     --top-font-size: 12px;
+    --top-button-width: 30px;
     --url-input-height: calc(var(--top-height) * 0.8);
     --tab-height: calc(var(--url-input-height) + 7px);
 
@@ -48,6 +49,14 @@
             --url-bar-ratio: 50%;
         }
     }
+	#back-button, #forward-button, #stop-reload-button
+	,#PanelUI-menu-button
+	,#nav-bar-overflow-button
+	,#unified-extensions-button
+	,#new-tab-button
+	{
+	    width: var(--top-button-width);
+	}
     @media (-moz-platform: linux), (-moz-platform: macos) {
         #TabsToolbar {
             position: absolute !important;
@@ -66,7 +75,7 @@
         }
         #tabbrowser-tabs {
             left: 30px !important;
-            right: 80px !important;
+            right: 50px !important;
         }
     }
     @media (-moz-platform: macos) {

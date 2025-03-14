@@ -7,8 +7,7 @@
     /* background-color: red !important; */
 }
 
-#TabsToolbar {
-
+#TabsToolbar > #TabsToolbar-customization-target > #tabbrowser-tabs {
 }
 
 #tabbrowser-tabs {
@@ -41,8 +40,21 @@
     /* background-color: purple !important; */
 }
 
-#nav-bar > #nav-bar-customization-target {
+#back-button, #forward-button, #stop-reload-button
+,#PanelUI-menu-button
+,#nav-bar-overflow-button
+,#unified-extensions-button
+,#new-tab-button
+{
 }
 
+
+.titlebar-min {
+
+}
+
+
+#nav-bar > #nav-bar-overflow-button {
+}
 #nav-bar > #PanelUI-button {
 }
