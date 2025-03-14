@@ -38,7 +38,17 @@ see `https://support.mozilla.org/zh-CN/kb/%E7%AE%A1%E7%90%86%E7%94%A8%E6%88%B7%E
 
 run `firefox -P` to re init
 
-# guess window source code
+# get window source code
+
+## file
+
+解压 `firefox安装目录/browser/omni.ja`
+
+```bash
+mkdir /tmp/firefox-window
+unzip firefox安装目录/browser/omni.ja -d /tmp/firefox-window
+vim /tmp/firefox-window/chrome/browser/content/browser/browser.xhtml
+```
 
 ## windows
 
@@ -132,26 +142,4 @@ run `firefox -P` to re init
         </div>
     </div>
 </div>
-```
-
-## ?? 
-``` css
-#urlbar[breakout][breakout-extend] > #urlbar-input-container,
-.urlbar-page-action
-#urlbar[breakout][breakout-extend][open]
-#wrapper-urlbar-container
-#urlbar-go-button
-#urlbar .urlbarView-body-inner
-#urlbar:not(.megabar):not([focused="true"]),
-#urlbar:not(.megabar):not([focused="true"]):hover {
-  border-bottom: transparent;
-}
-.urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
-  border-top: none !important;
-}
-/* Megabar */
-#urlbar[breakout] {
-  height: auto !important;
-}
-
 ```
