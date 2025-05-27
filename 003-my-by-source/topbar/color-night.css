@@ -1,0 +1,22 @@
+:root {
+    --top-bg-color: hsl(240, 2%, 20%);
+
+    /* tab */
+    --tab-bg: hsl(240, 2%, 26%);
+    --tab-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4);
+    --tab-bg-hover: hsl(240, 2%, 32%);    
+    /* tab 选中 */
+    --tab-select-bg: hsl(240, 2%, 13%);
+    /* 上 右 下 左 */
+    --tab-select-border-style: solid; 
+    --tab-select-border-width: 1px 0px;
+    --tab-select-border-color: 
+        hsla(0, 0%, 0%, 0.15) transparent hsla(0, 0%, 100%, 0.2) transparent;
+    --tab-select-box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.35);
+
+    --url-input-bg: var(--tab-select-bg);
+    --url-input-border-style: var(--tab-select-border-style);
+    --url-input-border-width: var(--tab-select-border-width);
+    --url-input-border-color: var(--tab-select-border-color);
+    --url-input-box-shadow: var(--tab-select-box-shadow);
+}

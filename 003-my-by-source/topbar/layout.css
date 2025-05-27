@@ -1,0 +1,129 @@
+/* #nav-bar { order: 0; }
+#TabsToolbar { order: 1; }
+#PersonalToolbar { order: 2; } */
+
+/* ====== 背景色 ============================================== */
+
+#nav-bar-customization-target
+,#nav-bar
+{ background: none !important; }
+
+#navigator-toolbox {
+    background-color: var(--top-bg-color) !important;
+}
+
+/* ====== 布局 ============================================== */
+
+@media screen and (max-width: 888px) {
+
+}
+@media screen and (min-width: 888px) {
+    #new-tab-button
+    ,#back-button 
+    ,#stop-reload-button
+    {
+        width: var(--top-button-width) !important;
+    }
+    #nav-bar {
+        position: absolute !important;
+        left: 0;
+        top: 0;
+        width: var(--url-bar-width) !important;
+    }
+    #titlebar
+    ,#TabsToolbar
+    /* ,#TabsToolbar-customization-target */
+    /* ,#tabbrowser-tabs */
+    {
+        width: calc(100% - var(--url-bar-width)) !important;
+        margin-left: var(--url-bar-width) !important;
+    }
+}
+
+/* ====== TAB ============================================== */
+
+#alltabs-button
+,.tab-background
+/* ,#toolbar-menubar */
+/* ,#firefox-view-button */
+{ display: none; }
+
+#firefox-view-button {
+    background-color: rebeccapurple !important;
+}
+
+#titlebar
+,#TabsToolbar
+,#TabsToolbar-customization-target
+,#tabbrowser-tabs
+/* tab 左右按钮高度 */
+,#tabbrowser-arrowscrollbox
+{
+    height: var(--top-height) !important;
+}
+
+#TabsToolbar > .titlebar-spacer {
+    width: 10px !important;
+}
+
+/* ？？ 不用fadein会破坏关闭tab自动消除左右箭头 */
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: var(--tab-max-width) !important;
+    /* min-width: var(--tab-min-width) !important; */
+}
+
+/* tabbrowser-tab 自带边距 固定标签 与一些动态效果， 如果直接修改tabbrowser-tab 会破坏这些效果 */
+.tabbrowser-tab > .tab-stack {
+    height: var(--tab-height) !important;
+    transition: background-color 250ms ease !important;
+    border-radius: var(--tab-border-radius) !important;
+    font-size: var(--top-font-size) !important;
+    margin: var(--tab-margin) !important
+}
+
+.tabbrowser-tab[selected] > .tab-stack{
+    background-color: var(--tab-select-bg) !important;
+    border-width: var(--tab-select-border-width) !important;
+    border-style: var(--tab-select-border-style) !important;
+    border-color: var(--tab-select-border-color) !important;
+    box-shadow: var(--tab-select-box-shadow) !important;
+}
+
+.tabbrowser-tab:not([selected]) > .tab-stack{
+    background-color: var(--tab-bg) !important;
+    box-shadow: var(--tab-box-shadow) !important;
+}
+.tabbrowser-tab:not([selected]):hover > .tab-stack {
+    background-color: var(--tab-bg-hover) !important;
+}
+
+/* 按钮： 最小化 最大化 关闭 */
+#TabsToolbar > .titlebar-buttonbox-container .titlebar-button {
+    width: var(--top-button-width) !important;
+}
+
+/* ====== URL ============================================== */
+
+#urlbar-background
+/* url输入框右侧按钮 */
+,#reader-mode-button
+,#translations-button
+/* url条左侧盾牌按钮 */
+/* ,#tracking-protection-icon-container */
+{ display: none !important; }
+
+#nav-bar {
+    height: var(--top-height) !important;
+}
+
+#urlbar-container {
+    width: var(--url-input-width) !important;
+}
+
+#urlbar[focused] {
+    background-color: var(--top-bg-color) !important;
+}
+
+#urlbar .urlbar-input-box {
+    text-align: center;
+}

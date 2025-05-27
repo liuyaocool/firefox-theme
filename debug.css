@@ -1,8 +1,68 @@
+:root {
+
+}
 @media (-moz-platform: linux) {
 }
 @media (-moz-platform: macos), (-moz-platform: windows) {
 }
 
+#urlbar-background {
+    /* opacity: 0 !important; */
+    /* display: none;
+    background-color: rgba(0,0,0,0) !important;
+    height: 20px;
+    width: 260px !important; */
+}
+#searchbar {
+    /* background-color: red !important; */
+}
+#urlbar-container * {
+    /* background-color: rgba(0,0,0,0) !important; */
+}
+#urlbar-container {
+    /* background-color: rgba(0,0,0,0) !important; */
+}
+#urlbar {
+    /* background-color: none !important; */
+}
+#urlbar[focused] {
+    /* background-color: black !important; */
+}
+#urlbar-input-container {
+    /* background-color: yellowgreen !important; */
+}
+
+#remote-control-box {
+    /* background-color: green !important; */
+}
+#urlbar-search-button {
+    /* background-color: rgb(21, 150, 150) !important; */
+}
+#tracking-protection-icon-container {
+    /* background-color: blue !important; */
+}
+#identity-box {
+    /* background-color: purple !important; */
+}
+#urlbar-label-box {
+    /* background-color: black !important; */
+}
+#urlbar-search-mode-indicator
+{
+    /* background-color: tomato !important; */
+}
+
+.urlbar-input-box {
+    /* background-color: none !important; */
+}
+#page-action-buttons {
+    /* background-color: rgb(21, 150, 150) !important; */
+}
+
+
+.tabbrowser-tab > .tab-stack > .tab-background > .tab-context-line {
+    /* background-color: red !important; */
+}
 #navigator-toolbox > #TabsToolbar {
     /* background-color: red !important; */
 }

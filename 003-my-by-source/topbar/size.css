@@ -1,0 +1,18 @@
+:root {
+    --top-height: 30px;
+    --top-font-size: 12px;
+    --top-button-width: 28px;
+
+    --tab-height: calc(var(--top-height) * 0.9);
+    --tab-margin: calc(var(--top-height) * 0.1) 0 0 0;
+    /* calc((var(--top-height) - var(--tab-height)) / 2); */
+    --tab-border-radius: calc(var(--tab-height) * 0.3) !important;
+    --tab-min-width: 110px;
+    --tab-max-width: 150px;
+    
+    --url-bar-width: 500px;
+    --url-border-radius: calc(var(--url-input-height) * 0.5);;
+    --url-input-height: calc(var(--top-height) * 0.8);
+    --url-input-width: 260px;
+
+}

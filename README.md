@@ -46,8 +46,16 @@ run `firefox -P` to re init
 
 ```bash
 mkdir /tmp/firefox-window
-unzip firefox安装目录/browser/omni.ja -d /tmp/firefox-window
-vim /tmp/firefox-window/chrome/browser/content/browser/browser.xhtml
+unzip firefox安装目录/browser/omni.ja -d firefox-window
+cd firefox-window
+
+# 2个关键目录
+cd chrome/browser/content/browser
+cd chrome/browser/skin
+# 2个关键文件
+vim chrome/browser/content/browser/browser.xhtml
+# tab 特殊
+vim chrome/browser/content/browser/tqbbrowser/tab.js
 ```
 
 ## windows
@@ -143,3 +151,10 @@ vim /tmp/firefox-window/chrome/browser/content/browser/browser.xhtml
     </div>
 </div>
 ```
+
+# source code build
+
+1. 打开 https://firefox-source-docs.mozilla.org/contributing/directory_structure.html
+2. 点击 “the repository”： https://firefox-source-docs.mozilla.org/contributing/contribution_quickref.html#firefox-contributors-quick-reference
+3. Download the “MozillaBuild Package”: https://ftp.mozilla.org/pub/mozilla/libraries/win32/MozillaBuildSetup-Latest.exe
+4. 打开exe程序
