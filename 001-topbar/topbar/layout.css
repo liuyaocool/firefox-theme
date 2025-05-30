@@ -15,7 +15,21 @@
 /* ====== 布局 ============================================== */
 
 @media screen and (max-width: 888px) {
+    #urlbar-container {
+        height: var(--url-input-height) !important;
+        margin-top: var(--url-input-margin) !important;
+        border-width: var(--tab-select-border-width) !important;
+        border-style: var(--tab-select-border-style) !important;
+        border-color: var(--tab-select-border-color) !important;
+    }
 
+    #urlbar-container
+    ,#urlbar[open]
+    {
+        border-radius: var(--url-border-radius) !important;
+        background-color: var(--tab-select-bg) !important;
+        box-shadow: var(--tab-select-box-shadow) !important;
+    }
 }
 @media screen and (min-width: 888px) {
     #new-tab-button
@@ -30,13 +44,17 @@
         top: 0;
         width: var(--url-bar-width) !important;
     }
-    #titlebar
-    ,#TabsToolbar
-    /* ,#TabsToolbar-customization-target */
-    /* ,#tabbrowser-tabs */
+    #TabsToolbar
     {
         width: calc(100% - var(--url-bar-width)) !important;
         margin-left: var(--url-bar-width) !important;
+    }
+    #urlbar[focused] {
+        background-color: var(--top-bg-color) !important;
+    }
+    
+    #urlbar-container {
+       width: var(--url-input-width) !important;
     }
 }
 
@@ -52,8 +70,7 @@
     background-color: rebeccapurple !important;
 }
 
-#titlebar
-,#TabsToolbar
+#TabsToolbar
 ,#TabsToolbar-customization-target
 ,#tabbrowser-tabs
 /* tab 左右按钮高度 */
@@ -108,22 +125,45 @@
 /* url输入框右侧按钮 */
 ,#reader-mode-button
 ,#translations-button
+
 /* url条左侧盾牌按钮 */
 /* ,#tracking-protection-icon-container */
+/* ,#searchmode-switcher-chicklet */
+
+/* 搜索引擎切换器 */
+,#searchmode-switcher-title
+,#searchmode-switcher-dropmarker
+,#urlbar-search-mode-indicator
 { display: none !important; }
 
 #nav-bar {
     height: var(--top-height) !important;
 }
 
-#urlbar-container {
-    width: var(--url-input-width) !important;
-}
-
-#urlbar[focused] {
-    background-color: var(--top-bg-color) !important;
-}
-
 #urlbar .urlbar-input-box {
     text-align: center;
+}
+
+#searchmode-switcher-icon {
+    border-radius: 50% !important;
+}
+
+/* url左侧搜索引擎切换器 */
+#searchmode-switcher-chicklet 
+,#urlbar-searchmode-switcher
+/* url左侧护盾按钮 */
+,#tracking-protection-icon-container
+/* url左侧按钮 */
+,#identity-box > *
+/* url右侧按钮 */
+,#page-action-buttons > *
+{
+    background-color: transparent !important;
+}
+
+#tracking-protection-icon-container:hover
+,#identity-box > *:hover
+,#page-action-buttons > *:hover
+{
+    color: var(--url-button-hover-color) !important;
 }

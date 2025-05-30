@@ -1,23 +1,16 @@
 # firefox-theme
 
-## 000 my theme
+## ~~000-my~~
 
-semi-finished: only top bar
+- linux <img src="img/000.png">
+- macos <img src="img/000_mac.png">
 
-**linux**
+> 参照: `https://github.com/datguypiko/Firefox-Mod-Blur.git` 
 
-<img src="img/000.png">
+## 001-topbar
 
-**macos**
-
-<img src="img/000_mac.png">
-
-## 001-Firefox-Mod-Blur-Modify
-
-git from: `https://github.com/datguypiko/Firefox-Mod-Blur.git` 
-
-<img src="img/001.png">
-
+- 单行 <img src="img/001_1.png">
+- 双行 <img src="img/001_2.png">
 
 
 # install
@@ -40,7 +33,49 @@ run `firefox -P` to re init
 
 # get window source code
 
-## file
+## 源码(推荐)
+
+### 关键文件
+
+```bash
+# 关键目录
+./browser
+# 关键文件 
+## 顶部栏(url/tab...)
+./browser/base/content/navigator-toolbox.inc.xhtml
+## tab
+./browser/compents/tabbrowser/content/tab.js
+```
+
+### 下载
+
+**方法1**
+
+1. https://hg-edge.mozilla.org/mozilla-central/
+2. click "zip"
+
+**方法2 hg**
+
+```bash
+# macOS (Homebrew)
+brew install mercurial
+# Ubuntu/Debian
+sudo apt-get install mercurial
+
+hg clone https://hg.mozilla.org/mozilla-central/
+hg clone --pull https://hg.mozilla.org/mozilla-central/
+```
+
+**方法3 git**
+
+`git clone https://github.com/mozilla/gecko-dev.git`
+
+
+**方法4? 快照**
+
+https://searchfox.org/mozilla-central/source/browser/components/urlbar/SearchModeSwitcher.sys.mjs
+
+## ~~安装目录找~~
 
 解压 `firefox安装目录/browser/omni.ja`
 

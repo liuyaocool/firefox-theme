@@ -19,4 +19,5 @@
     --url-input-border-width: var(--tab-select-border-width);
     --url-input-border-color: var(--tab-select-border-color);
     --url-input-box-shadow: var(--tab-select-box-shadow);
+    --url-button-hover-color: greenyellow;
 }
