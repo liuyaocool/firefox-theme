@@ -1,0 +1,67 @@
+#toolbar-menubar     /* File Edit 栏 */
+{
+    display: none !important;
+}
+
+/* ====== 背景色 ============================================== */
+
+#nav-bar
+,#urlbar
+,#PersonalToolbar
+{
+    background: none !important;
+}
+
+#navigator-toolbox {
+    background: var(--top-bg-color);
+}
+
+/* ====== 布局 尺寸 ============================================== */
+
+@media screen and (max-width: 1200px) {
+    /* 解决url聚焦 向下偏移问题 */
+/*    #urlbar { top: var(--top-height) !important; }*/
+    #urlbar { top: 0px !important; }
+    #nav-bar { order: 1; }
+    #TabsToolbar { order: 2; }
+    #PersonalToolbar { order: 3; }
+    #nav-bar {
+        width: calc(100% - 80px);
+    }
+    #TabsToolbar > .titlebar-buttonbox-container {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    /* 解决url聚焦 向下偏移问题 */
+    #urlbar { top: 0px !important; }
+
+    #navigator-toolbox {
+    }
+    /* tabs栏 */
+    #TabsToolbar {
+        position: absolute;
+        left: var(--url-bar-width);
+        right: 0px;
+    }
+    /* 地址栏 */
+    #nav-bar {
+        width: var(--url-bar-width);
+    }
+    /* 书签栏 */
+    #PersonalToolbar {
+    }
+
+    /* ====== urlbar ============================================== */
+    #urlbar-container { order: 1; }
+    #back-button { order: 2; }
+    #forward-button { order: 3; }
+    #stop-reload-button, #stop-button { order: 4; }
+    #unified-extensions-button { order: 5; }
+
+    #urlbar-container {
+        margin: 0 !important;
+    }
+}

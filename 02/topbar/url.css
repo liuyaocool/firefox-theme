@@ -1,0 +1,45 @@
+
+#main-button         /* 搜索引擎按钮 */
+,#identity-box        /* 左侧autoplay */
+,#trust-label         /* 盾牌 `Not Secure` */
+,#translations-button /* 翻译按钮 */
+,#reader-mode-button  /* 阅读模式按钮 */
+,#urlbar > .urlbar-background
+{
+    display: none !important;
+}
+
+#nav-bar 
+{
+    height: var(--top-height);
+}
+
+#back-button
+,#forward-button
+,#stop-reload-button
+,#stop-button
+{
+    width: var(--top-height);
+}
+
+#urlbar .urlbar-input-container {
+    height: 22px !important;
+    text-align: center;
+    font-size: 14px;
+    margin: 4px;
+    border-radius: 15px !important;
+    border-width: var(--tab-select-border-width) !important;
+}
+#urlbar[focused] .urlbar-input-container {
+    background-color: var(--tab-select-bg);
+    box-shadow: var(--tab-select-box-shadow) !important;
+    border-style: var(--tab-select-border-style) !important;
+    border-color: var(--tab-select-border-color) !important;
+}
+
+/* 地址栏聚焦下拉 */
+#urlbar > .urlbarView {
+/*    background-color: gray;*/
+    background-color: var(--top-bg-color) !important;
+    box-shadow: var(--url-list-shador) !important;
+}
