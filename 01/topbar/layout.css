@@ -3,6 +3,11 @@
     display: none !important;
 }
 
+/* 最小化仨按钮 */
+#TabsToolbar > .titlebar-buttonbox-container .titlebar-button {
+    height: var(--top-height);
+}
+
 /* ====== 背景色 ============================================== */
 
 #nav-bar
@@ -61,8 +66,8 @@
     #stop-reload-button, #stop-button { order: 4; }
     #unified-extensions-button { order: 5; }
 
-    #trust-icon-container { order: 1; }
-/*    #page-action-buttons { order: 2; }*/
+    #trust-icon-container { order: 2; }
+    #page-action-buttons { order: 3; }
 
     #urlbar-container {
         margin: 0 !important;

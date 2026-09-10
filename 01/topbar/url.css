@@ -1,10 +1,13 @@
+:root {
+    --urlbar-box-background-color: none !important;
+}
 
-#main-button         /* 搜索引擎按钮 */
+#main-button          /* 搜索引擎按钮 */
 ,#identity-box        /* 左侧autoplay */
 ,#trust-label         /* 盾牌 `Not Secure` */
 ,#translations-button /* 翻译按钮 */
 ,#reader-mode-button  /* 阅读模式按钮 */
-,#trust-icon-container.secure
+,#trust-icon-container.secure /* 安全盾牌 */
 ,#urlbar > .urlbar-background
 {
     display: none !important;
@@ -24,11 +27,17 @@
 }
 
 #urlbar .urlbar-input-box {
-    height: 19px !important;
+    height: var(--url-height) !important;
     text-align: center;
-    font-size: 14px;
-    border-radius: 15px;
-    padding: 0px 10px 2px 10px;
+    font-size: var(--url-font-size);
+    border-radius: calc(var(--top-height) / 2);
+    padding: var(--url-padding);
+}
+#urlbar:not([focused]) .urlbar-input-box {
+    background-color: var(--tab-bg);
+/*    box-shadow: var(--tab-box-shadow);*/
+}
+#urlbar[focused] .urlbar-input-box {
     background-color: var(--tab-select-bg);
     border-width: var(--tab-select-border-width);
     border-style: var(--tab-select-border-style);
@@ -36,7 +45,7 @@
     box-shadow: var(--tab-select-box-shadow) !important;
 }
 
-/* 地址栏聚焦下拉 */
+/* 地址栏下拉菜单 */
 #urlbar > .urlbarView {
 /*    background-color: gray;*/
     background-color: var(--top-bg-color) !important;

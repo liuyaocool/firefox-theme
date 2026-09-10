@@ -1,36 +1,24 @@
 .tab-background
-,#alltabs-button                  /* 最小化左边 下箭头 */
-,#customizableui-special-spring11 /* 最小化左边 空格 */
+,#alltabs-button                  /* tabs最右边 下箭头 */
+,#customizableui-special-spring11 /* tabs最右边 空格 */
+/*,#tabbrowser-arrowscrollbox spacer*/
 {
     display: none !important;
 }
 
 #new-tab-button, #tabs-newtab-button     /* 新tab按钮 “+”号 */
-, #pinned-tabs-container .tabbrowser-tab /* 固定tabs下tab */
 {
-/*    width: var(--top-height);;*/
+    width: var(--top-height);;
     height: var(--top-height);;
 }
 
 /*,#TabsToolbar*/
 #TabsToolbar-customization-target /* tabs组合 包含 <>+ */
+,.tabbrowser-tab    /* tabs下tab */
 ,#scrollbutton-up   /* tabs左按钮 */
 ,#scrollbutton-down /* tabs右按钮 */
-,#TabsToolbar > .titlebar-buttonbox-container > .titlebar-buttonbox > .titlebar-button /* 最小化仨按钮 */
 {
     height: var(--top-height);
-}
-
-#TabsToolbar > .titlebar-buttonbox-container
-,#TabsToolbar > .titlebar-buttonbox-container > .titlebar-buttonbox
-{
-    height: fit-content;
-}
-
-/* ？？ 不用fadein会破坏关闭tab自动消除左右箭头 */
-.tabbrowser-tab[fadein]:not([pinned]) {
-    max-width: var(--tab-max-width) !important;
-    /* min-width: var(--tab-min-width) !important; */
 }
 
 /* tabbrowser-tab 自带边距 固定标签 与一些动态效果， 如果直接修改tabbrowser-tab 会破坏这些效果 */
