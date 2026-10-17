@@ -2,12 +2,12 @@
     --urlbar-box-background-color: none !important;
 }
 
-#main-button          /* 搜索引擎按钮 */
-,#identity-box        /* 左侧autoplay */
-,#trust-label         /* 盾牌 `Not Secure` */
-,#translations-button /* 翻译按钮 */
-,#reader-mode-button  /* 阅读模式按钮 */
-,#trust-icon-container.secure /* 安全盾牌 */
+#nav-bar #main-button          /* 搜索引擎按钮 */
+,#nav-bar #identity-box        /* 左侧autoplay */
+,#nav-bar #trust-label         /* 盾牌 `Not Secure` */
+,#nav-bar #translations-button /* 翻译按钮 */
+,#nav-bar #reader-mode-button  /* 阅读模式按钮 */
+,#nav-bar #trust-icon-container.secure /* 安全盾牌 */
 ,#urlbar > .urlbar-background
 {
     display: none !important;
